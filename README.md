@@ -19,3 +19,8 @@ The Neural density estimators can be used to evaluate DKL, MI and DJS using only
 - `scipy`
 - `matplotlib`
 - `tqdm`
+
+## Installation
+DeepInfo is available on PyPI and can be downloaded and installed through pip:
+
+ ```pip install deepinfo```
