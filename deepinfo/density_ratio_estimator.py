@@ -107,7 +107,8 @@ class DensityRatioEstimator(object):
     """
     
     def __init__(self, numerator = [], denominator = [], load_dir = None, 
-                 l2_reg = 0., l1_reg=0., nodes_number=50, objective='MINE',seed=None,validation_split=0.1,optimizer='RMSprop',gamma=0.001,lr=0.001):
+                 l2_reg = 0., l1_reg=0., nodes_number=50, objective='BCE',
+                 seed=None,validation_split=0.1,optimizer='RMSprop',gamma=0.001,lr=0.001):
         
         self.numerator = numerator
         self.denominator = denominator
@@ -210,7 +211,6 @@ class DensityRatioEstimator(object):
         
         patience: int
             patience of the early stopping callback
-        
             
         """
         self.batch_size=batch_size

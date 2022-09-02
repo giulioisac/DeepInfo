@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='deepinfo',
-      version='0.0.2',
+      version='0.0.3',
       description='Infer information theoretic quantities ( Mutual information, KL divergence, DJS divergence ) with Neural Networks',
       long_description='',
       author='Giulio Isacchini',

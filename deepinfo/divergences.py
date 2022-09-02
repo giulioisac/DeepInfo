@@ -6,7 +6,7 @@ Created on 2 May 2021
 
 """
 
-from mimsbi.density_ratio_estimator import DensityRatioEstimator
+from deepinfo.density_ratio_estimator import DensityRatioEstimator
 import numpy as np
 
 class DklDivergence(DensityRatioEstimator):
@@ -19,7 +19,7 @@ class DklDivergence(DensityRatioEstimator):
     
     
     def __init__(self, numerator = [], denominator = [], load_dir = None, 
-                 l2_reg = 0., l1_reg=0., nodes_number=50, objective='MINE',
+                 l2_reg = 0., l1_reg=0., nodes_number=50, objective='BCE',
                  seed=None,validation_split=0.1,optimizer='RMSprop'):
         super().__init__(numerator = numerator, denominator = denominator, load_dir = load_dir, 
                          l2_reg = l2_reg, l1_reg=l1_reg, nodes_number=nodes_number, 
@@ -38,7 +38,7 @@ class DjsDivergence(object):
     """
     
     def __init__(self, values1 = [], values2 = [], load_dir = None, 
-                 l2_reg = 0., l1_reg=0., nodes_number=50, objective='MINE',
+                 l2_reg = 0., l1_reg=0., nodes_number=50, objective='BCE',
                  seed=None,validation_split=0.1,optimizer='RMSprop'):
         
         n_num=len(values1)
@@ -75,7 +75,7 @@ class MutualInformation(DensityRatioEstimator):
     """
     
     def __init__(self, values1 = [], values2 = [], load_dir = None, 
-                 l2_reg = 0., l1_reg=0., nodes_number=50, objective='MINE',
+                 l2_reg = 0., l1_reg=0., nodes_number=50, objective='BCE',
                  seed=None,validation_split=0.1,optimizer='RMSprop',gamma=0.001,lr=0.001):
         
         self.values1 = values1
